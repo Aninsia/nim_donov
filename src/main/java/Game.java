@@ -10,4 +10,15 @@ public class Game {
         check(Integer.parseInt(array[0]), Integer.parseInt(array[1]));
     }
 
+    public static void check(int x, int y) {
+        if (User_interface.table[x] >= User_interface.table[y]) {
+            User_interface.table[x] -= User_interface.table[y];
+            User_interface.table[y] += User_interface.table[y];
+        } else {
+            User_interface.game_state = state.ERROR;
+        }
+        if (User_interface.table[0] == User_interface.table[1] && User_interface.table[1] == User_interface.table[2]) {
+            User_interface.game_state = state.WIN;
+        }
+    }
 }
