@@ -20,5 +20,6 @@ public class Game {
         if (User_interface.table[0] == User_interface.table[1] && User_interface.table[1] == User_interface.table[2]) {
             User_interface.game_state = state.WIN;
         }
+        
     }
 }
