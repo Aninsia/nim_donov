@@ -83,6 +83,10 @@ public class User_interface extends JPanel {
                 g2d.drawString("Wrong input! first < second", 130, 60);
                 game_state = state.START;
             }
+            case INPUT_ERROR -> {
+                g2d.drawString("Wrong input!", 130, 60);
+                game_state = state.START;
+            }
         }
     }
 }
